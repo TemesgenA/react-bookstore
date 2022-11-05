@@ -1,0 +1,15 @@
+.App {
+  background-color: #fafafa;
+  margin: 4em 3em;
+  width: 77em;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  /* margin: 0 2.5rem 4.063rem 0;
+  padding: 0 0 49.625rem;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: #fafafa; */
+}
