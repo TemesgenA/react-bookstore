@@ -1,21 +1,29 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import Booklist from './Booklist';
-import { getbooks } from '../redux/books/books';
+import React from 'react';
+import BooksList from './Books';
 import BookForm from './BookForm';
 
 const BookView = () => {
-  const books = useSelector((state) => state.book);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getbooks());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const books = [
+    {
+      id: 1,
+      title: 'Dune',
+      author: 'Suzanne Collins',
+    },
+    {
+      id: 2,
+      title: 'The Hunger Games',
+      author: 'James Roynolds',
+    },
+    {
+      id: 3,
+      title: 'Catch me if you can',
+      author: 'Leaonardo de Caprio',
+    },
+  ];
 
   return (
     <>
-      <Booklist books={books} />
+      <BooksList books={books} />
       <BookForm />
     </>
   );
