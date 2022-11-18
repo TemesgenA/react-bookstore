@@ -1,15 +1,17 @@
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Books from './components/Books';
-import BookForm from './components/BookForm';
+import BookView from './components/BookView';
+import Categories from './components/Category';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Books />
-      <BookForm />
-
+      <Routes>
+        <Route exact path="/" element={<BookView />} />
+        <Route exact path="/categories" element={<Categories />} />
+      </Routes>
     </div>
   );
 }
