@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { addbook } from '../redux/books/books';
+import { addbook, getbooks } from '../redux/books/books';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
@@ -18,6 +18,7 @@ const BookForm = () => {
     setTitle('');
     setAuthor('');
     dispatch(addbook(book));
+    dispatch(getbooks());
   };
 
   return (
@@ -31,6 +32,7 @@ const BookForm = () => {
           id="title"
           className="book-title-input"
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
         <input
           type="text"
@@ -40,6 +42,7 @@ const BookForm = () => {
           id="author"
           className="book-title-input"
           onChange={(e) => setAuthor(e.target.value)}
+          required
         />
         <button type="submit">ADD BOOK</button>
       </form>
