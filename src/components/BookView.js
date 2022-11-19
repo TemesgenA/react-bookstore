@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import BooksList from './Books';
-import BookForm from './BookForm';
 import { getbooks } from '../redux/books/books';
 
 const BookView = () => {
@@ -15,7 +14,6 @@ const BookView = () => {
   return (
     <>
       <BooksList books={books} />
-      <BookForm />
     </>
   );
 };

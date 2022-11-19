@@ -22,31 +22,28 @@ const BookForm = () => {
   };
 
   return (
-    <>
-      <form className="form" onSubmit={handleSubmit}>
+    <div className="form-enclosure">
+      <h2 className="form-header">ADD NEW BOOK</h2>
+      <form className="form flex" onSubmit={handleSubmit}>
         <input
-          type="text"
+          className="book-title-input"
           name="title"
           value={title}
+          type="text"
           placeholder="Book title"
-          id="title"
-          className="book-title-input"
           onChange={(e) => setTitle(e.target.value)}
-          required
         />
         <input
+          className="book-title-input author"
           type="text"
+          placeholder="Author"
           name="author"
           value={author}
-          placeholder="Book author"
-          id="author"
-          className="book-title-input"
           onChange={(e) => setAuthor(e.target.value)}
-          required
         />
-        <button type="submit">ADD BOOK</button>
+        <button className="chapter-btn addbook" type="submit">Add Book</button>
       </form>
-    </>
+    </div>
   );
 };
 

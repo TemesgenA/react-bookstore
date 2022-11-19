@@ -6,7 +6,7 @@ import Categories from './components/Category';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app-container flex">
       <Header />
       <Routes>
         <Route exact path="/" element={<BookView />} />

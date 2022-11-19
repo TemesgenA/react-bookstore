@@ -1,139 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&family=Roboto+Slab:wght@300;400;500;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background-color: #f5f6fa;
-  box-sizing: border-box;
-}
-
-.Header {
-  display: flex;
-  color: #0290ff;
-  align-items: center;
-  background-color: #fff;
-}
-
-.nav {
-  margin-left: 10px;
-}
-
-.nav-links {
-  display: flex;
-  list-style-type: none;
-  gap: 1em;
-  color: #121212;
-}
-
-.logo {
-  padding-left: 10px;
-}
-
-.Books {
-  display: flex;
-  justify-content: space-around;
-  background-color: #fff;
-  align-items: center;
-}
-
-.book-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.contributor,
-.interaction {
-  color: #4386bf;
-}
-
-.progress {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8em;
-}
-
-.circular-progress-container {
-  width: 5.625rem;
-  height: 5.625rem;
-  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circular-progress {
-  position: absolute;
-  border: solid 5px #307bbe;
-  border-left-color: #e8e8e8;
-  border-radius: 50%;
-  width: 4.25rem;
-  height: 4.25rem;
-  border-style: solid;
-  border-width: 5px;
-  transform: rotate(45deg);
-}
-
-.progress-completed {
-  display: flex;
-  align-items: center;
-}
-
-.progress-numeric {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100px;
-  height: 100px;
   margin: 0;
-  padding: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.p-numeric-size {
-  font-size: xx-large;
-  margin: 0;
-  padding: 0;
-}
-
-.completed-txt {
-  margin: 0;
-  padding: 0;
-}
-
-.update-progress {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.p-btn,
-.btn-input {
-  background-color: #0290ff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  height: 32px;
-  width: 180px;
-}
-
-.form-input {
-  background-color: #fff;
-  width: 300px;
-  height: 32px;
-  border: 1px solid #e8e8e8;
-}
-
-.form-input-catag {
-  background-color: #fff;
-  width: 200px;
-  height: 32px;
-  border: 1px solid #e8e8e8;
-}
-
-.form {
-  margin-left: 140px;
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
 }
