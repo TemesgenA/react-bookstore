@@ -1,20 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { nanoid } from 'nanoid';
+import { addbook } from '../redux/books/books';
 
-const BookForm = () => (
-  <form action="#" method="get" className="form">
-    <label htmlFor="book-title">
-      ADD NEW BOOK
-      <input type="text" name="book-title" placeholder="Book title" id="book-title" className="form-input-catag" />
-    </label>
-    {' '}
-    <br />
-    <select className="form-input-catag">
-      <option value="catagory-1">catagory-1</option>
-      <option value="catagory-2">catagory-2</option>
-      <option selected value="catagory-3">catagory-3</option>
-    </select>
-    <input type="submit" value="ADD BOOK" className="btn-input" />
-  </form>
-);
+const BookForm = () => {
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const book = {
+      id: nanoid(),
+      title,
+      author,
+      category: '',
+    };
+    setTitle('');
+    setAuthor('');
+    dispatch(addbook(book));
+  };
+
+  return (
+    <>
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="title"
+          value={title}
+          placeholder="Book title"
+          id="title"
+          className="book-title-input"
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          type="text"
+          name="author"
+          value={author}
+          placeholder="Book author"
+          id="author"
+          className="book-title-input"
+          onChange={(e) => setAuthor(e.target.value)}
+        />
+        <button type="submit">ADD BOOK</button>
+      </form>
+    </>
+  );
+};
 
 export default BookForm;
