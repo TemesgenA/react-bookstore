@@ -30,13 +30,13 @@ body {
 
 .nav-container {
   min-height: 5.98rem;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
   background-color: #fff;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
   margin-bottom: 2.5rem;
-  width: 100%;
-  border-bottom: 1px solid #e8e8e8;
 }
 
 .nav-container > h1 {
@@ -63,9 +63,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 3rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 .book-wrapper {
@@ -120,11 +117,6 @@ body {
   width: 90%;
   padding-left: 0;
   margin-left: 0;
-}
-
-.remove-button {
-  width: 4.375rem;
-  padding: 5px;
 }
 
 .chapter-title,
