@@ -1,21 +1,18 @@
 import React from 'react';
-import IconButton from './IconButton';
+import { Link } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa';
 
 const Header = () => (
-  <div className="Header">
-    <div className="logo">
+  <>
+    <div className="nav-container flex">
       <h1>Bookstore CMS</h1>
-    </div>
-    <nav className="nav">
-      <ul className="nav-links">
-        <li className="books">BOOKS</li>
-        <li className="catagories">CATEGORIES</li>
+      <ul className="list flex">
+        <Link className="link" to="/">Books</Link>
+        <Link className="link" to="/categories">Categories</Link>
       </ul>
-      {/* <div className="Oval"></div> */}
-      {/* <div className="Mask"></div> */}
-    </nav>
-    <IconButton />
-  </div>
+      <FaUser className="icon" />
+    </div>
+  </>
 );
 
 export default Header;

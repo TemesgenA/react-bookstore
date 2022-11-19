@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Book from './Book';
+import BookForm from './BookForm';
 
 const BooksList = (props) => {
   const { books } = props;
@@ -15,6 +16,7 @@ const BooksList = (props) => {
           id={book.id}
         />
       ))}
+      <BookForm />
     </ul>
 
   );
